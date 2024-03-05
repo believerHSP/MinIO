@@ -53,13 +53,17 @@ Configure Keycloak for PBAC
 
 6. Once created, assign the Client Scope to the MinIO client.
    Navigate to clients and select the MinIO client.
-
    Select client scopes, then select add client scope.
    Select the previously created scope and set the assigned type to default.
+   
+   ![Screenshot from 2024-03-05 22-20-55](https://github.com/believerHSP/MinIO/assets/101576376/0fb332a1-5d3b-4c6d-b6ba-7e6d331cd756)
 
-7. Apply the Necessary Attribute to Keycloak Groups:
+6. Apply the Necessary Attribute to Keycloak Groups:
    Create a User & Set credentials for it.
    Create a attribute with policy as key and value with a custom policy created in minIO.
+
+   ![Screenshot from 2024-03-05 22-22-51](https://github.com/believerHSP/MinIO/assets/101576376/69e3c875-3591-4a71-9159-e0b59efb2788)
+
 
 8. By configuring above options keycloak will add an attribute in JWT.
    You can test the configured policies of a user by using the Keycloak API:
