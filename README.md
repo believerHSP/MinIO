@@ -7,12 +7,12 @@ Configure Keycloak for PBAC
 1. Create a Realm
    
 2. Create a client with following configurations:
-   client ID: <minio>
-   Always display in UI: Toggle On 
-   Valid redirect URIs: http://192.168.122.1:9001/oauth_callback
-   web origins: *
-   client Authentication: Toggle On
-   Authentication Flow: Toggle On Standard Flow & Direct Access Grants
+   client ID: <minio> .
+   Always display in UI: Toggle On .
+   Valid redirect URIs: http://192.168.122.1:9001/oauth_callback  .
+   web origins: *  .
+   client Authentication: Toggle On  .
+   Authentication Flow: Toggle On Standard Flow & Direct Access Grants .
 
 3. Client Scopes: allow Keycloak to map user attributes as part of the JSON Web Token (JWT) returned in authentication requests. This allows MinIO to reference 
                   those attributes when assigning policies to the user.
