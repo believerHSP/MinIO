@@ -7,14 +7,19 @@ Configure Keycloak for PBAC
 1. Create a Realm
    
 2. Create a client with following configurations:
-   client ID: <minio> .
-   Always display in UI: Toggle On .
-   Valid redirect URIs: http://192.168.122.1:9001/oauth_callback  .
-   web origins: *  .
-   client Authentication: Toggle On  .
-   Authentication Flow: Toggle On Standard Flow & Direct Access Grants .
+   client ID: <minio> 
+   Always display in UI: Toggle On 
+   Valid redirect URIs: http://192.168.122.1:9001/oauth_callback  
+   web origins: *  
+   client Authentication: Toggle On  
+   Authentication Flow: Toggle On Standard Flow & Direct Access Grants
+   
+![Screenshot from 2024-03-05 20-09-51](https://github.com/believerHSP/MinIO/assets/101576376/cb1fe9d3-4069-45ca-9f1e-7f2ea27e808a)  
 
-3. Client Scopes: allow Keycloak to map user attributes as part of the JSON Web Token (JWT) returned in authentication requests. This allows MinIO to reference 
+   
+
+
+4. Client Scopes: allow Keycloak to map user attributes as part of the JSON Web Token (JWT) returned in authentication requests. This allows MinIO to reference 
                   those attributes when assigning policies to the user.
    ** This step creates the necessary client scope to support MinIO authorization after successful Keycloak authentication.
 
@@ -23,7 +28,7 @@ Configure Keycloak for PBAC
    Display on consent screen: Toggle On
    Include in token space: Toggle On
  ￼
-4. Once created, select the scope from the list and navigate to mappers.
+5. Once created, select the scope from the list and navigate to mappers.
    Select configure a new mapper to create a new mapping:
    Mapper Type: User Attribute
    Name: <minio-policy-mapper>
@@ -36,17 +41,17 @@ Configure Keycloak for PBAC
    Add to userinfo
    Add to token introspection
 
-5. Once created, assign the Client Scope to the MinIO client.
+6. Once created, assign the Client Scope to the MinIO client.
    Navigate to clients and select the MinIO client.
 
    Select client scopes, then select add client scope.
    Select the previously created scope and set the assigned type to default.
 
-6. Apply the Necessary Attribute to Keycloak Groups:
+7. Apply the Necessary Attribute to Keycloak Groups:
    Create a User & Set credentials for it.
    Create a attribute with policy as key and value with a custom policy created in minIO.
 
-7. By configuring above options keycloak will add an attribute in JWT.
+8. By configuring above options keycloak will add an attribute in JWT.
    You can test the configured policies of a user by using the Keycloak API:
    
     curl -d "client_id=minio" \
