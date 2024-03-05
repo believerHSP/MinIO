@@ -14,9 +14,11 @@ Configure Keycloak for PBAC
    client Authentication: Toggle On  
    Authentication Flow: Toggle On Standard Flow & Direct Access Grants
    
-![Screenshot from 2024-03-05 20-09-51](https://github.com/believerHSP/MinIO/assets/101576376/cb1fe9d3-4069-45ca-9f1e-7f2ea27e808a)  
+   ![Screenshot from 2024-03-05 20-09-51](https://github.com/believerHSP/MinIO/assets/101576376/cb1fe9d3-4069-45ca-9f1e-7f2ea27e808a)  
 
-   
+   ![Screenshot from 2024-03-05 20-09-58](https://github.com/believerHSP/MinIO/assets/101576376/f220b900-ba04-41b4-95c7-87190e89f1b7)
+
+   ![Screenshot from 2024-03-05 20-10-26](https://github.com/believerHSP/MinIO/assets/101576376/470173d4-f2d1-408e-b685-403d6e839d75)
 
 
 4. Client Scopes: allow Keycloak to map user attributes as part of the JSON Web Token (JWT) returned in authentication requests. This allows MinIO to reference 
@@ -27,6 +29,9 @@ Configure Keycloak for PBAC
    Name: <minio_acl>
    Display on consent screen: Toggle On
    Include in token space: Toggle On
+
+   ![Screenshot from 2024-03-05 20-20-29](https://github.com/believerHSP/MinIO/assets/101576376/06f41b70-d9b5-4b40-8ba7-3e95b1b9928d)
+
  ￼
 5. Once created, select the scope from the list and navigate to mappers.
    Select configure a new mapper to create a new mapping:
@@ -40,6 +45,11 @@ Configure Keycloak for PBAC
    Add to access token
    Add to userinfo
    Add to token introspection
+
+   ![Screenshot from 2024-03-05 20-20-53](https://github.com/believerHSP/MinIO/assets/101576376/97210773-5dbe-4ca0-838d-885b7589063d)
+
+   ![Screenshot from 2024-03-05 20-21-11](https://github.com/believerHSP/MinIO/assets/101576376/41ca212b-ffad-4222-aa1a-7a8b4204634b)
+
 
 6. Once created, assign the Client Scope to the MinIO client.
    Navigate to clients and select the MinIO client.
