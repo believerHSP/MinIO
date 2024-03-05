@@ -58,7 +58,7 @@ Configure Keycloak for PBAC
 
      Use a JWT decoder to review the payload and ensure it contains the policy key with a MinIO policy.
    
-9. Configure MinIO for Keycloak Authentication:
+Configure MinIO for Keycloak Authentication:
 
     podman run --name minio -dt \
    -p 9000:9000 \
